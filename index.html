@@ -1,124 +1,411 @@
-# Professional Portfolio for Vittawat Sootawee
-
-I'll create a comprehensive portfolio website showcasing Vittawat's AI and Full-Stack Engineering expertise using the exact specifications provided.
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vittawat Sootawee - Full-Cycle AI Engineer specializing in translating research into scalable web/mobile solutions with a focus on health-tech and education.">
-    <meta name="keywords" content="AI Engineer, LLM Fine-tuning, Full-stack Developer, Flutter, Next.js, Supabase, Cloud Specialist">
+    <meta name="description" content="Vittawat Sootawee - AI & Full-Stack Engineer | วิทวัส สุตะวี - วิศวกร AI และ Full-Stack | ผู้เชี่ยวชาญด้านการพัฒนาแอปพลิเคชัน AI และระบบครบวงจร">
+    <meta name="keywords" content="AI Engineer, Full-Stack Developer, Machine Learning, React, Python, Mobile Apps, Thailand Developer, วิศวกร AI, นักพัฒนาซอฟต์แวร์">
     <meta name="author" content="Vittawat Sootawee">
+    <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Social Media Meta Tags -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Vittawat Sootawee - AI & Full-Stack Engineer">
-    <meta property="og:description" content="Building scalable AI-driven solutions that enhance daily life. Specializing in LLM fine-tuning and production-grade deployments.">
-    <meta property="og:image" content="https://yt3.googleusercontent.com/Mpz7KKDOJmf3m9ALAWTCAYB9OZ-ROt4WX609_QaQ2bLBAPZtMAn_jTBgMv_cWcOBkzUcz9Qj=s160-c-k-c0x00ffffff-no-rj">
-    <meta property="og:url" content="https://vittawat-portfolio.com">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:description" content="Experienced AI engineer specializing in transforming research into production-ready applications">
+    <meta property="og:image" content="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-1/486160157_672040672143705_8831580082068103124_n.jpg">
+    <meta property="og:url" content="#">
+    <meta property="og:type" content="website">
     
-    <title>Vittawat Sootawee - Full-Cycle AI Engineer</title>
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vittawat Sootawee - AI & Full-Stack Engineer">
+    <meta name="twitter:description" content="Experienced AI engineer specializing in transforming research into production-ready applications">
+    <meta name="twitter:image" content="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-1/486160157_672040672143705_8831580082068103124_n.jpg">
+    
+    <title>Vittawat Sootawee - AI & Full-Stack Engineer | วิทวัส สุตะวี - วิศวกร AI</title>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
     
     <style>
+        /* CSS Variables */
         :root {
-            --ai-gold: #FFC74D;
-            --tech-teal: #4FC3F7;
-            --primary-blue: #166088;
-            --secondary-blue: #4A6FA5;
-            --neutral-light: #F5F7FA;
-            --neutral-dark: #333333;
-            --transition: all 0.3s ease;
-            --section-padding: clamp(3rem, 5vw, 6rem);
-            --border-radius: 8px;
-            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --primary-blue: #2563EB;
+            --deep-navy: #1E293B;
+            --success-green: #10B981;
+            --accent-purple: #7C3AED;
+            --warning-amber: #F59E0B;
+            --pure-white: #FFFFFF;
+            --light-gray: #F8FAFC;
+            --medium-gray: #64748B;
+            --dark-gray: #334155;
+            --charcoal: #0F172A;
+            --container-xl: 1200px;
+            --container-lg: 1024px;
+            --container-md: 768px;
+            --spacing-unit: 1.5rem;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         
+        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: var(--font-primary);
             line-height: 1.6;
-            color: var(--neutral-dark);
-            background-color: var(--neutral-light);
+            color: var(--dark-gray);
+            background-color: var(--pure-white);
             overflow-x: hidden;
         }
         
-        h1, h2, h3, h4 {
-            font-family: 'Fira Code', monospace;
+        /* Container System */
+        .container {
+            max-width: var(--container-xl);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .container-lg {
+            max-width: var(--container-lg);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .container-md {
+            max-width: var(--container-md);
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
             font-weight: 700;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.02em;
+            color: var(--charcoal);
             line-height: 1.2;
         }
         
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
         }
         
-        h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 2rem;
-            position: relative;
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
         }
-
-        h2:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            width: 80px;
-            height: 4px;
-            background: var(--tech-teal);
-            border-radius: 2px;
+        
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
         }
         
         p {
-            margin-bottom: 1.25rem;
-            font-size: clamp(1rem, 1.05vw, 1.125rem);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
         }
         
-        a {
+        .lead {
+            font-size: 1.125rem;
+            color: var(--medium-gray);
+            font-weight: 400;
+        }
+        
+        /* Language Toggle */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--pure-white);
+            border: 2px solid var(--primary-blue);
+            border-radius: 25px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .language-toggle:hover {
+            background: var(--primary-blue);
+            color: var(--pure-white);
+            transform: translateY(-2px);
+        }
+        
+        .language-toggle .flag {
+            margin-right: 8px;
+        }
+        
+        /* Content Language Display */
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
             text-decoration: none;
-            color: var(--secondary-blue);
-            transition: var(--transition);
         }
         
-        a:hover {
-            color: var(--tech-teal);
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
         }
         
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
         }
         
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--light-gray) 0%, rgba(37, 99, 235, 0.05) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(37,99,235,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-text h1 {
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--medium-gray);
+            font-weight: 500;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: fadeIn 1s ease-out 0.8s both;
+        }
+        
+        .profile-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid var(--pure-white);
+            box-shadow: var(--shadow-xl);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            width: 20px;
+            height: 20px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            width: 30px;
+            height: 30px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            width: 15px;
+            height: 15px;
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        /* Buttons */
         .btn {
             display: inline-block;
-            padding: 12px 28px;
-            font-family: 'Fira Code', monospace;
-            background: var(--primary-blue);
-            color: white;
-            border-radius: 999px;
-            font-weight: 500;
-            transition: var(--transition);
-            border: 2px solid var(--primary-blue);
-            text-transform: uppercase;
-            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-align: center;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
         }
         
-        .btn:hover {
-            background: transparent;
-            color: var(--primary-blue);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(22, 96, 136, 0.2);
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--pure-white);
+            border-color: var(--primary-blue);
+        }
+        
+        .btn-primary:hover {
+            background: var(--deep-navy);
+            border-color: var(--deep-navy);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
         
         .btn-secondary {
@@ -129,987 +416,750 @@ I'll create a comprehensive portfolio website showcasing Vittawat's AI and Full-
         
         .btn-secondary:hover {
             background: var(--primary-blue);
-            color: white;
+            color: var(--pure-white);
+            transform: translateY(-2px);
         }
         
-        section {
-            padding: var(--section-padding) 0;
-            position: relative;
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
-        }
-        
-        .float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        /* Header/Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(245, 247, 250, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 1rem 0;
-            transition: var(--transition);
-        }
-        
-        header.scrolled {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            padding: 0.8rem 0;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Fira Code', monospace;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            position: relative;
-            font-weight: 500;
-            font-size: 1.1rem;
-        }
-        
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--tech-teal);
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-        
-        .mobile-btn {
-            display: none;
+        .btn-ghost {
             background: transparent;
+            color: var(--medium-gray);
             border: none;
-            font-size: 1.5rem;
+        }
+        
+        .btn-ghost:hover {
             color: var(--primary-blue);
-            cursor: pointer;
         }
         
-        /* Hero Section */
-        #hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 80px;
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: var(--pure-white);
         }
         
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            background: var(--ai-gold);
-            color: var(--neutral-dark);
-            font-family: 'Fira Code', monospace;
-            font-weight: 500;
-            padding: 6px 14px;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            animation: float 2s ease-in-out infinite;
-        }
-        
-        .hero-subtitle {
-            color: var(--secondary-blue);
-            margin: 1.5rem 0 2.5rem;
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
-            max-width: 600px;
-        }
-        
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        
-        .hero-image {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
-            width: 45%;
-            max-width: 600px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            animation: float 4s ease-in-out infinite;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 4px;
-        }
-        
-        .tech-banner {
-            position: absolute;
-            bottom: 5%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.9rem;
-            z-index: 2;
-        }
-        
-        .tech-logos {
-            display: flex;
-            gap: 2.5rem;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 1rem 2rem;
-            border-radius: 999px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .tech-logos img {
-            height: 30px;
-            filter: grayscale(100%) contrast(0.5);
-            transition: var(--transition);
-        }
-        
-        .tech-logos img:hover {
-            filter: none;
-            transform: scale(1.1);
-        }
-        
-        /* Skills Section */
-        #skills {
-            background: white;
-            position: relative;
-        }
-        
-        .skills-header {
+        .about-content {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         
-        .skills-header h2:after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .skills-grid {
+        .expertise-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2.5rem;
+            margin-top: 3rem;
         }
         
-        .skill-category {
-            background: var(--neutral-light);
-            border-radius: var(--border-radius);
+        .expertise-item {
+            background: var(--light-gray);
             padding: 2rem;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-            border-left: 4px solid var(--tech-teal);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
         
-        .skill-category:hover {
-            transform: translateY(-10px);
-            border-color: var(--ai-gold);
+        .expertise-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-blue);
         }
         
-        .skill-category h3 {
-            margin-bottom: 1.5rem;
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-        }
-        
-        .skill-item {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .skill-item:before {
-            content: "▹";
-            color: var(--tech-teal);
-            margin-right: 10px;
-        }
-        
-        .cert-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 199, 77, 0.2);
-            color: var(--neutral-dark);
-            padding: 8px 16px;
-            border-radius: 999px;
-            margin-top: 2rem;
-            font-family: 'Fira Code', monospace;
-            font-weight: 500;
-        }
-        
-        .cert-badge span {
-            color: var(--ai-gold);
-            font-weight: 700;
+        .expertise-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
         }
         
         /* Projects Section */
-        #projects {
-            background: #f0f5fa;
-            position: relative;
+        .projects {
+            padding: 6rem 0;
+            background: var(--light-gray);
         }
         
-        .projects-grid {
+        .projects-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .project-showcase {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
         
         .project-card {
-            background: white;
-            border-radius: var(--border-radius);
+            background: var(--pure-white);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
         
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(37, 99, 235, 0.2);
         }
         
         .project-image {
             height: 200px;
-            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-size: 3rem;
         }
         
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .project-card:hover .project-image img {
-            transform: scale(1.05);
-        }
-        
-        .project-badge {
+        .project-status {
             position: absolute;
             top: 1rem;
             right: 1rem;
-            background: var(--ai-gold);
-            color: var(--neutral-dark);
-            font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
-            padding: 5px 12px;
-            border-radius: 999px;
+            background: var(--success-green);
+            color: var(--pure-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
             font-weight: 600;
-        }
-        
-        .project-stars {
-            display: flex;
-            position: absolute;
-            bottom: 1rem;
-            left: 1rem;
-        }
-        
-        .star {
-            color: gold;
-            font-size: 1.2rem;
         }
         
         .project-content {
             padding: 2rem;
         }
         
-        .project-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        .project-type {
             color: var(--primary-blue);
-        }
-        
-        .project-content ul {
-            margin: 1.5rem 0;
-            padding-left: 1rem;
-        }
-        
-        .project-content li {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 25px;
         }
         
-        .project-content li:before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--tech-teal);
-        }
-        
-        .project-metrics {
+        .tech-stack {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tech-tag {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary-blue);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            font-family: var(--font-mono);
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
             margin-top: 1.5rem;
         }
         
-        .metric {
-            background: var(--neutral-light);
-            padding: 8px 15px;
-            border-radius: 999px;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
+        /* Skills Section */
+        .skills {
+            padding: 6rem 0;
+            background: var(--pure-white);
         }
         
-        .metric-score {
-            color: var(--tech-teal);
-            font-weight: 700;
-        }
-        
-        /* Timeline */
-        #process {
-            background: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .process-header {
+        .skills-header {
             text-align: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 4rem;
         }
         
-        .process-header h2:after {
-            left: 50%;
-            transform: translateX(-50%);
+        .skills-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
         }
         
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .timeline:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--tech-teal);
-            left: 50%;
-            margin-left: -2px;
-            border-radius: 2px;
-        }
-        
-        .timeline-item {
-            margin-bottom: 3rem;
-            position: relative;
-            width: 100%;
-        }
-        
-        .timeline-content {
-            width: calc(50% - 40px);
+        .skill-category {
+            background: var(--light-gray);
             padding: 2rem;
-            position: relative;
-            border-radius: var(--border-radius);
-            background: var(--neutral-light);
-            box-shadow: var(--box-shadow);
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-4px);
+        }
+        
+        .skill-category h3 {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-level-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--pure-white);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+        
+        .skill-level {
+            background: var(--primary-blue);
+            color: var(--pure-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .skill-level.expert {
+            background: var(--success-green);
+        }
+        
+        .skill-level.proficient {
+            background: var(--warning-amber);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+            color: var(--pure-white);
+            text-align: center;
+        }
+        
+        .contact h2,
+        .contact .lead {
+            color: var(--pure-white);
+        }
+        
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--pure-white);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .contact-method:hover {
+            background: var(--pure-white);
+            color: var(--primary-blue);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--charcoal);
+            color: var(--pure-white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer p {
+            color: var(--medium-gray);
+            margin: 0;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* Scroll Animations */
+        .fade-in {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
         }
         
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: auto;
-        }
-        
-        .timeline-content.visible {
+        .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
         
-        .timeline-content h3 {
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-        
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .tech-tag {
-            padding: 4px 12px;
-            background: rgba(79, 195, 247, 0.15);
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-family: 'Fira Code', monospace;
-            color: var(--primary-blue);
-        }
-        
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        
-        .contact-container {
-            max-width: 700px;
-            margin: 0 auto;
-            z-index: 2;
-            position: relative;
-        }
-        
-        .contact-header {
-            margin-bottom: 2rem;
-        }
-        
-        .contact-header h2:after {
-            background: white;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .contact-text {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-        }
-        
-        .contact-form {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: var(--border-radius);
-            padding: 2.5rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-family: 'Fira Code', monospace;
-            opacity: 0.9;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 20px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: var(--border-radius);
-            color: white;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: white;
-            background: rgba(255, 255, 255, 0.25);
-        }
-        
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-        
-        .submit-btn {
-            background: var(--ai-gold);
-            color: var(--neutral-dark);
-            text-transform: uppercase;
-            font-family: 'Fira Code', monospace;
-            font-weight: 600;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 999px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: inline-block;
-            margin-top: 0.5rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .alt-cta {
-            margin-top: 2rem;
-            font-size: 0.95rem;
-        }
-        
-        .fixed-contact {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 1000;
-            background: var(--tech-teal);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .fixed-contact:hover {
-            transform: scale(1.1);
-            background: var(--primary-blue);
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(79, 195, 247, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(79, 195, 247, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(79, 195, 247, 0); }
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--neutral-dark);
-            color: rgba(255, 255, 255, 0.7);
-            padding: 3rem 0 2rem;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .footer-logo {
-            color: white;
-            font-family: 'Fira Code', monospace;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .footer-nav {
-            display: flex;
-            gap: 2rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .footer-nav a {
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .footer-nav a:hover {
-            color: white;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        
-        .social-icon {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-        
-        .social-icon:hover {
-            background: var(--tech-teal);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            width: 100%;
-            opacity: 0.5;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Styles */
-        @media screen and (max-width: 1024px) {
-            .hero-image {
-                width: 40%;
-            }
-            
-            .tech-logos {
-                gap: 1.8rem;
-                padding: 0.8rem 1.5rem;
-            }
-        }
-        
-        @media screen and (max-width: 900px) {
-            .nav-links {
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
                 position: fixed;
-                top: 0;
-                right: -100%;
-                height: 100vh;
-                width: 70%;
-                background: rgba(22, 96, 136, 0.97);
-                backdrop-filter: blur(10px);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: right 0.3s ease;
-                z-index: 100;
-            }
-            
-            .nav-links.active {
+                top: 100%;
+                left: 0;
                 right: 0;
+                background: var(--pure-white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: var(--shadow-lg);
+                transform: translateY(-100%);
+                transition: transform 0.3s ease;
             }
             
-            .nav-links a {
-                color: white;
-                font-size: 1.3rem;
-                margin: 0.8rem 0;
+            .nav-menu.active {
+                transform: translateY(0);
             }
             
-            .mobile-btn {
+            .nav-toggle {
                 display: block;
-                z-index: 1000;
-            }
-            
-            #hero {
-                padding-top: 60px;
             }
             
             .hero-content {
-                max-width: 100%;
-                padding: 2rem;
-                background: rgba(245, 247, 250, 0.8);
-                backdrop-filter: blur(5px);
-                border-radius: var(--border-radius);
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .hero-text {
+                order: 2;
             }
             
             .hero-image {
-                position: relative;
-                transform: none;
-                top: 0;
-                width: 100%;
-                margin-bottom: 2rem;
-                animation: none;
+                order: 1;
+            }
+            
+            .profile-image {
+                width: 250px;
+                height: 250px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+                flex-wrap: wrap;
             }
             
             .hero-cta {
-                flex-direction: column;
-            }
-            
-            .tech-banner {
-                position: relative;
-                bottom: 0;
-                margin: 3rem 0;
-            }
-            
-            .tech-logos {
-                flex-wrap: wrap;
                 justify-content: center;
-                max-width: 90%;
-                margin: 0 auto;
-                padding: 1rem;
+                flex-wrap: wrap;
             }
             
-            .timeline:before {
-                left: 20px;
+            .contact-options {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .timeline-content {
-                width: calc(100% - 60px);
-                margin-left: 40px !important;
-            }
-        }
-        
-        @media screen and (max-width: 600px) {
-            .projects-grid {
+            .expertise-grid {
                 grid-template-columns: 1fr;
             }
             
-            .form-group {
-                margin-bottom: 1rem;
+            .project-showcase {
+                grid-template-columns: 1fr;
             }
             
-            .tech-logos img {
-                height: 20px;
+            .skills-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.75rem;
             }
             
-            .fixed-contact {
-                width: 50px;
-                height: 50px;
-                bottom: 1.5rem;
-                right: 1.5rem;
-                font-size: 20px;
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+            
+            .language-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 0.875rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header id="header">
-        <div class="container nav-container">
-            <a href="#" class="logo">VS</a>
-            <nav>
-                <div class="mobile-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Language Toggle -->
+    <button class="language-toggle" id="languageToggle">
+        <span class="flag">🇹🇭</span>
+        <span id="languageText">ไทย</span>
+    </button>
 
-    <!-- Hero Section -->
-    <section id="hero">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="hero-content">
-                <span class="hero-badge">AI & Full-Stack Engineer</span>
-                <h1>Transforming Research Into Solutions That Enhance Daily Life</h1>
-                <p class="hero-subtitle">4+ years of expertise in building AI-driven web/mobile products for health-tech, education, civic tech, and consumer markets</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn">Explore My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-                <div>
-                    <p><span class="ai-gold">Specializations:</span> LLM Fine-tuning • Full-Stack Engineering • Cloud Deployment • Mobile App Development • RAG/CAG Pipelines</p>
-                </div>
+            <div class="nav-container">
+                <a href="#" class="nav-brand">Vittawat.dev</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about" data-en="About" data-th="เกี่ยวกับ">เกี่ยวกับ</a></li>
+                    <li><a href="#projects" data-en="Projects" data-th="ผลงาน">ผลงาน</a></li>
+                    <li><a href="#skills" data-en="Skills" data-th="ทักษะ">ทักษะ</a></li>
+                    <li><a href="#contact" data-en="Contact" data-th="ติดต่อ">ติดต่อ</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle">☰</button>
             </div>
         </div>
-        
-        <div class="hero-image float">
-            <img src="https://yt3.googleusercontent.com/Mpz7KKDOJmf3m9ALAWTCAYB9OZ-ROt4WX609_QaQ2bLBAPZtMAn_jTBgMv_cWcOBkzUcz9Qj=s160-c-k-c0x00ffffff-no-rj" alt="Vittawat Sootawee">
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
         </div>
-        
-        <div class="tech-banner">
-            <div class="tech-logos">
-                <!-- Logos represented with text for simplicity -->
-                <div>Python</div>
-                <div>Flutter</div>
-                <div>Next.js</div>
-                <div>Supabase</div>
-                <div>AWS</div>
-                <div>Docker</div>
-                <div>TensorFlow</div>
-                <div>TypeScript</div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <!-- Thai Content -->
+                    <div class="lang-content thai active">
+                        <h1>วิศวกร AI และ Full-Stack</h1>
+                        <p class="hero-subtitle">
+                            ผู้เชี่ยวชาญในการแปลงงานวิจัย AI ที่ล้ำสมัยให้เป็นแอปพลิเคชันที่พร้อมใช้งานจริง 
+                            เพื่อยกระดับคุณภาพชีวิตประจำวัน
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">4+</span>
+                                <span class="stat-label">ปี ประสบการณ์</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5.0★</span>
+                                <span class="stat-label">คะแนนแอป</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95+</span>
+                                <span class="stat-label">Lighthouse Score</span>
+                            </div>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">ดูผลงานของฉัน</a>
+                            <a href="mailto:vittawat.soo@gmail.com" class="btn btn-secondary">ติดต่อฉัน</a>
+                        </div>
+                    </div>
+                    
+                    <!-- English Content -->
+                    <div class="lang-content english">
+                        <h1>AI & Full-Stack Engineer</h1>
+                        <p class="hero-subtitle">
+                            Transforming cutting-edge AI research into production-ready 
+                            applications that enhance daily life
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">4+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5.0★</span>
+                                <span class="stat-label">App Rating</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95+</span>
+                                <span class="stat-label">Lighthouse Score</span>
+                            </div>
+                        </div>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="mailto:vittawat.soo@gmail.com" class="btn btn-secondary">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-1/486160157_672040672143705_8831580082068103124_n.jpg?stp=c0.374.1536.1536a_dst-jpg_s320x320_tt6&_nc_cat=103&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=05wIq6LJ9dAQ7kNvwGthbc2&_nc_oc=Adm9CpRI1brMy8HfTaNa0JjXLLTXsQ1y-CMBCpOGkvzNpYyHiRP4_36Nr1Ta4KvengmLTd2ITojfI8pbn9P9jJJJ&_nc_zt=24&_nc_ht=scontent.fkkc3-1.fna&_nc_gid=fcbCJKhPhAdpLK8mcgZrpw&oh=00_AfPVehx4CGnl5KP1nttsTqACvvOFH4M39W4-XCAxp-iZ7g&oe=684B86C1" 
+                         alt="Vittawat Sootawee Profile Picture" 
+                         class="profile-image">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- About Section -->
+    <section class="about fade-in" id="about">
         <div class="container">
-            <div class="skills-header">
-                <h2>Technical Excellence</h2>
-                <p>Cutting-edge tech stack enabling precision engineering from research to deployment</p>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3>AI Engineering</h3>
-                    <div class="skill-item">LLM Fine-tuning (Typhoon, Llama 3.1)</div>
-                    <div class="skill-item">RAG/CAG Pipelines</div>
-                    <div class="skill-item">Prompt Engineering</div>
-                    <div class="skill-item">PyTorch & TensorFlow</div>
-                    <div class="skill-item">Jupyter Notebook Integration</div>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <h3>Cloud Solutions</h3>
-                    <div class="skill-item">AWS Infrastructure</div>
-                    <div class="skill-item">Supabase Integration</div>
-                    <div class="skill-item">Docker Containers</div>
-                    <div class="skill-item">Redis & n8n Automations</div>
-                    <div class="skill-item">API Development (FastAPI)</div>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <h3>Web & Mobile</h3>
-                    <div class="skill-item">Next.js App Router</div>
-                    <div class="skill-item">Flutter (iOS & Android)</div>
-                    <div class="skill-item">React Ecosystems</div>
-                    <div class="skill-item">TypeScript & JavaScript (ES6+)</div>
-                    <div class="skill-item">Headless CMS Systems</div>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <h3>Data Systems</h3>
-                    <div class="skill-item">PostgreSQL / PostGIS</div>
-                    <div class="skill-item">MongoDB Integration</div>
-                    <div class="skill-item">Spatial Data Analysis</div>
-                    <div class="skill-item">Webhooks Implementation</div>
-                    <div class="skill-item">Data Visualization</div>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <h3>DevOps & UX</h3>
-                    <div class="skill-item">CI/CD with GitHub Actions</div>
-                    <div class="skill-item">Lighthouse Optimization (>95)</div>
-                    <div class="skill-item">Jira Project Management</div>
-                    <div class="skill-item">Embedded ESP32 Systems</div>
-                    <div class="skill-item">Blockchain Fundamentals</div>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <h3>Frameworks & Tools</h3>
-                    <div class="skill-item">Git Version Control</div>
-                    <div class="skill-item">VS Code Productivity</div>
-                    <div class="skill-item">Testing Frameworks</div>
-                    <div class="skill-item">Webpack Configuration</div>
-                    <div class="skill-item">Authentication Systems</div>
+            <!-- Thai Content -->
+            <div class="lang-content thai active">
+                <div class="about-content">
+                    <h2>จากงานวิจัยสู่ความเป็นจริง</h2>
+                    <p class="lead">
+                        ฉันเชี่ยวชาญในวงจรการพัฒนาผลิตภัณฑ์ AI ครบวงจร—ตั้งแต่การปรับแต่ง LLM 
+                        และการพัฒนา RAG pipeline ไปจนถึงการ deploy บนคลาวด์และการเผยแพร่แอปมือถือ
+                    </p>
                 </div>
             </div>
             
-            <div class="cert-badge fade-in">
-                <i class="fas fa-certificate"></i>
-                <div>Microsoft Certified: <span>MCP (Microsoft Certified Professional)</span></div>
+            <!-- English Content -->
+            <div class="lang-content english">
+                <div class="about-content">
+                    <h2>From Research to Reality</h2>
+                    <p class="lead">
+                        I specialize in the complete AI product lifecycle—from LLM 
+                        fine-tuning and RAG pipeline development to cloud deployment 
+                        and mobile app releases.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="expertise-grid">
+                <!-- Thai Content -->
+                <div class="lang-content thai active">
+                    <div class="expertise-item">
+                        <span class="expertise-icon">🧠</span>
+                        <h4>การวิจัยและพัฒนา AI</h4>
+                        <p>การปรับแต่ง LLMs, สร้าง RAG pipelines, prompt engineering</p>
+                    </div>
+                    <div class="expertise-item">
+                        <span class="expertise-icon">🚀</span>
+                        <h4>การ Deploy ระบบใช้งานจริง</h4>
+                        <p>สถาปัตยกรรมคลาวด์, CI/CD, การปรับปรุงประสิทธิภาพ</p>
+                    </div>
+                    <div class="expertise-item">
+                        <span class="expertise-icon">📱</span>
+                        <h4>การพัฒนา Full-Stack</h4>
+                        <p>React/Next.js, แอปมือถือ Flutter, FastAPI backends</p>
+                    </div>
+                </div>
+                
+                <!-- English Content -->
+                <div class="lang-content english">
+                    <div class="expertise-item">
+                        <span class="expertise-icon">🧠</span>
+                        <h4>AI Research & Development</h4>
+                        <p>Fine-tuning LLMs, building RAG pipelines, prompt engineering</p>
+                    </div>
+                    <div class="expertise-item">
+                        <span class="expertise-icon">🚀</span>
+                        <h4>Production Deployment</h4>
+                        <p>Cloud architecture, CI/CD, performance optimization</p>
+                    </div>
+                    <div class="expertise-item">
+                        <span class="expertise-icon">📱</span>
+                        <h4>Full-Stack Development</h4>
+                        <p>React/Next.js, Flutter mobile apps, FastAPI backends</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section class="projects fade-in" id="projects">
         <div class="container">
-            <h2>Flagship Projects</h2>
-            <p>Production-grade applications with measurable impact across multiple domains</p>
+            <!-- Thai Content -->
+            <div class="lang-content thai active">
+                <div class="projects-header">
+                    <h2>ผลงานที่โดดเด่น</h2>
+                    <p class="lead">แอปพลิเคชันที่ใช้งานจริงและโปรเจกต์นวัตกรรมที่ผมได้พัฒนา</p>
+                </div>
+            </div>
             
-            <div class="projects-grid">
+            <!-- English Content -->
+            <div class="lang-content english">
+                <div class="projects-header">
+                    <h2>Featured Projects</h2>
+                    <p class="lead">Production applications and innovative projects I've developed</p>
+                </div>
+            </div>
+            
+            <div class="project-showcase">
+                <!-- Project 1: EduBuddy -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div style="background: #1a5276; height:100%; display:flex; align-items:center; justify-content:center; color:white; font-size:2rem;">
-                            <div>EduBuddy</div>
-                        </div>
-                        <div class="project-badge">Education</div>
+                        🎓
+                        <div class="project-status">🔴 Live</div>
                     </div>
                     <div class="project-content">
-                        <h3>EduBuddy (MU Chat)</h3>
-                        <p>AI chatbot assistant deployed at Mahidol University to enhance education accessibility and student support.</p>
-                        <ul>
-                            <li>Fine-tuned Thai language models for academic contexts</li>
-                            <li>Integrated with university knowledge base</li>
-                            <li>Scalable cloud deployment architecture</li>
-                        </ul>
-                        <div class="project-metrics">
-                            <span class="metric"><span class="metric-score">Live</span> at edubuddy.mahidol.ac.th</span>
-                            <span class="metric">↑ 32% student satisfaction</span>
+                        <!-- Thai Content -->
+                        <div class="lang-content thai active">
+                            <p class="project-type">ผู้ช่วยการเรียน AI</p>
+                            <h3>EduBuddy (MU Chat)</h3>
+                            <p>แอปพลิเคชัน AI สำหรับนักศึกษามหาวิทยาลัยที่ให้ความช่วยเหลือในการเรียนแบบส่วนบุคคล</p>
+                        </div>
+                        
+                        <!-- English Content -->
+                        <div class="lang-content english">
+                            <p class="project-type">AI Study Assistant</p>
+                            <h3>EduBuddy (MU Chat)</h3>
+                            <p>Production AI application serving university students with personalized learning assistance.</p>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LLM Fine-tuning</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Next.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://edubuddy.mahidol.ac.th" class="btn btn-primary" target="_blank">Live Demo</a>
+                            <a href="https://github.com/Boom-Vitt" class="btn btn-ghost" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Project 2: Map Analytics -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div style="background: #27ae60; height:100%; display:flex; align-items:center; justify-content:center; color:white; font-size:2rem;">
-                            <div>Salayte Hashery</div>
-                        </div>
-                        <div class="project-stars">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <div class="project-badge">Consumer</div>
+                        🗺️
                     </div>
                     <div class="project-content">
-                        <h3>Salayte Hashery App</h3>
-                        <p>Food-ordering application featuring a sophisticated loyalty system driving customer retention.</p>
-                        <ul>
-                            <li>Built with Flutter for iOS & Android</li>
-                            <li>Supabase backend with realtime updates</li>
-                            <li>Integration with payment gateways</li>
-                        </ul>
-                        <div class="project-metrics">
-                            <span class="metric">★★★★★ Rating</span>
-                            <span class="metric">↑ 45% repeat orders</span>
+                        <!-- Thai Content -->
+                        <div class="lang-content thai active">
+                            <p class="project-type">แพลตฟอร์มวิเคราะห์พื้นที่</p>
+                            <h3>Map Analytics Platform</h3>
+                            <p>ระบบวิเคราะห์ข้อมูลเชิงพื้นที่สำหรับองค์กร ใช้ในการวิเคราะห์ทราฟฟิกและเลือกทำเลที่ตั้ง</p>
+                        </div>
+                        
+                        <!-- English Content -->
+                        <div class="lang-content english">
+                            <p class="project-type">Enterprise Spatial Analytics</p>
+                            <h3>Map Analytics Platform</h3>
+                            <p>Spatial data analysis platform for traffic analysis and location intelligence tools.</p>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Google Maps API</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">View Project</a>
+                            <a href="https://github.com/Boom-Vitt" class="btn btn-ghost" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Project 3: Salayte Hashery -->
                 <div class="project-card">
                     <div class="project-image">
-                        <div style="background: #8e44ad; height:100%; display:flex; align-items:center; justify-content:center; color:white; font-size:2rem;">
-                            <div>Map Analytics</div>
-                        </div>
-                        <div class="project-badge">Civic Tech</div>
+                        🍽️
+                        <div class="project-status">5.0★</div>
                     </div>
                     <div class="project-content">
-                        <h3>Geospatial Analytics Platform</h3>
-                        <p>Spatial intelligence solution for urban planning and civic tech applications.</p>
-                        <ul>
-                            <li>Next.js frontend with Mapbox integration</li>
-                            <li>PostGIS spatial database backend</li>
-                            <li>Traffic flow analytics algorithms</li>
-                        </ul>
-                        <div class="project-metrics">
-                            <span class="metric">↓ 40ms latency</span>
-                            <span class="metric">99.8% uptime</span>
+                        <!-- Thai Content -->
+                        <div class="lang-content thai active">
+                            <p class="project-type">แอปมือถือสำหรับผู้บริโภค</p>
+                            <h3>Salayte Hashery Mobile App</h3>
+                            <p>แอปส่งอาหารพร้อมระบบสะสมแต้มความคุ้มค่า ได้รับคะแนนเฉลี่ย 5.0 ดาว</p>
+                        </div>
+                        
+                        <!-- English Content -->
+                        <div class="lang-content english">
+                            <p class="project-type">Consumer Mobile App</p>
+                            <h3>Salayte Hashery Mobile App</h3>
+                            <p>Food delivery app with loyalty program integration. Achieved 5.0-star average rating.</p>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Headless CMS</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">App Store</a>
+                            <a href="https://github.com/Boom-Vitt" class="btn btn-ghost" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: AI Agents Course -->
+                <div class="project-card">
+                    <div class="project-image">
+                        🤖
+                    </div>
+                    <div class="project-content">
+                        <!-- Thai Content -->
+                        <div class="lang-content thai active">
+                            <p class="project-type">นวัตกรรมการศึกษา</p>
+                            <h3>AI Agents Course Platform</h3>
+                            <p>แพลตฟอร์มที่ช่วยให้อาจารย์สร้างและจัดการหลักสูตร AI Agent ได้อย่างง่ายดาย</p>
+                        </div>
+                        
+                        <!-- English Content -->
+                        <div class="lang-content english">
+                            <p class="project-type">Educational Innovation</p>
+                            <h3>AI Agents Course Platform</h3>
+                            <p>Platform enabling professors to create and manage AI Agent courses efficiently.</p>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">AI Integration</span>
+                            <span class="tech-tag">Education Tech</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="https://github.com/Boom-Vitt" class="btn btn-ghost" target="_blank">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -1117,59 +1167,169 @@ I'll create a comprehensive portfolio website showcasing Vittawat's AI and Full-
         </div>
     </section>
 
-    <!-- Process Timeline -->
-    <section id="process">
+    <!-- Skills Section -->
+    <section class="skills fade-in" id="skills">
         <div class="container">
-            <div class="process-header">
-                <h2>From Lab to Production</h2>
-                <p>Full-cycle development workflow yielding high-impact solutions</p>
+            <!-- Thai Content -->
+            <div class="lang-content thai active">
+                <div class="skills-header">
+                    <h2>ความเชี่ยวชาญทางเทคนิค</h2>
+                    <p class="lead">ทักษะและเทคโนโลยีที่ผมใช้ในการสร้างโซลูชันที่มีประสิทธิภาพ</p>
+                </div>
             </div>
             
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Research & Design</h3>
-                        <p>Initial phase exploring scientific literature, design schematics, and problem space analysis to define solution parameters.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">Jupyter</span>
-                            <span class="tech-tag">Prompt Engineering</span>
+            <!-- English Content -->
+            <div class="lang-content english">
+                <div class="skills-header">
+                    <h2>Technical Expertise</h2>
+                    <p class="lead">Skills and technologies I use to create efficient solutions</p>
+                </div>
+            </div>
+            
+            <div class="skills-categories">
+                <!-- AI/ML Development -->
+                <div class="skill-category">
+                    <!-- Thai Content -->
+                    <div class="lang-content thai active">
+                        <h3>🤖 การพัฒนา AI/ML</h3>
+                        <div class="skill-level-grid">
+                            <div class="skill-item">
+                                <span class="skill-name">Large Language Models</span>
+                                <span class="skill-level expert">ผู้เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PyTorch & TensorFlow</span>
+                                <span class="skill-level expert">ผู้เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">RAG Pipelines</span>
+                                <span class="skill-level expert">ผู้เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">OpenRouter & MCP</span>
+                                <span class="skill-level proficient">เชี่ยวชาญ</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- English Content -->
+                    <div class="lang-content english">
+                        <h3>🤖 AI/ML Development</h3>
+                        <div class="skill-level-grid">
+                            <div class="skill-item">
+                                <span class="skill-name">Large Language Models</span>
+                                <span class="skill-level expert">Expert</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PyTorch & TensorFlow</span>
+                                <span class="skill-level expert">Expert</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">RAG Pipelines</span>
+                                <span class="skill-level expert">Expert</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">OpenRouter & MCP</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Prototyping</h3>
-                        <p>Iterative development of PoC models with rapid validation cycles and feedback implementation.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">LLMs</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">RAG Pipelines</span>
+
+                <!-- Full-Stack Development -->
+                <div class="skill-category">
+                    <!-- Thai Content -->
+                    <div class="lang-content thai active">
+                        <h3>💻 การพัฒนา Full-Stack</h3>
+                        <div class="skill-level-grid">
+                            <div class="skill-item">
+                                <span class="skill-name">React & Next.js</span>
+                                <span class="skill-level expert">ผู้เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TypeScript</span>
+                                <span class="skill-level expert">ผู้เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Flutter & Dart</span>
+                                <span class="skill-level proficient">เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python & FastAPI</span>
+                                <span class="skill-level expert">ผู้เชี่ยวชาญ</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- English Content -->
+                    <div class="lang-content english">
+                        <h3>💻 Full-Stack Development</h3>
+                        <div class="skill-level-grid">
+                            <div class="skill-item">
+                                <span class="skill-name">React & Next.js</span>
+                                <span class="skill-level expert">Expert</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TypeScript</span>
+                                <span class="skill-level expert">Expert</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Flutter & Dart</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python & FastAPI</span>
+                                <span class="skill-level expert">Expert</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Development</h3>
-                        <p>Building production-ready applications using modern frameworks and development principles.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">TypeScript</span>
+
+                <!-- Cloud & Infrastructure -->
+                <div class="skill-category">
+                    <!-- Thai Content -->
+                    <div class="lang-content thai active">
+                        <h3>☁️ คลาวด์และโครงสร้างระบบ</h3>
+                        <div class="skill-level-grid">
+                            <div class="skill-item">
+                                <span class="skill-name">AWS & Supabase</span>
+                                <span class="skill-level proficient">เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Docker & CI/CD</span>
+                                <span class="skill-level proficient">เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PostgreSQL & MongoDB</span>
+                                <span class="skill-level proficient">เชี่ยวชาญ</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Performance Optimization</span>
+                                <span class="skill-level expert">ผู้เชี่ยวชาญ</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Deployment</h3>
-                        <p>Containerized cloud deployment with performance optimization and CI/CD automation.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">GitHub Actions</span>
+                    
+                    <!-- English Content -->
+                    <div class="lang-content english">
+                        <h3>☁️ Cloud & Infrastructure</h3>
+                        <div class="skill-level-grid">
+                            <div class="skill-item">
+                                <span class="skill-name">AWS & Supabase</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Docker & CI/CD</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PostgreSQL & MongoDB</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Performance Optimization</span>
+                                <span class="skill-level expert">Expert</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1178,94 +1338,269 @@ I'll create a comprehensive portfolio website showcasing Vittawat's AI and Full-
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section class="contact fade-in" id="contact">
         <div class="container">
-            <div class="contact-container">
-                <div class="contact-header">
-                    <h2>Build With Me</h2>
-                </div>
-                
-                <p class="contact-text">Let's collaborate to transform your vision into a high-performance solution powered by cutting-edge AI.</p>
-                
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" class="form-control" placeholder="Enter your name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="you@company.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="project">Project Details</label>
-                        <textarea id="project" rows="4" class="form-control" placeholder="Tell me about your project..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message</button>
-                    
-                    <div class="alt-cta">
-                        <p>Prefer technical specifications? <a href="https://github.com/Boom-Vitt" target="_blank">Submit via GitHub</a></p>
-                    </div>
-                </form>
+            <!-- Thai Content -->
+            <div class="lang-content thai active">
+                <h2>มาสร้างสิ่งยิ่งใหญ่ด้วยกัน</h2>
+                <p class="lead">
+                    พร้อมที่จะแปลงไอเดีย AI ของคุณให้เป็นโซลูชันที่พร้อมใช้งานจริงแล้วหรือยัง?
+                </p>
+            </div>
+            
+            <!-- English Content -->
+            <div class="lang-content english">
+                <h2>Let's Build Something Amazing</h2>
+                <p class="lead">
+                    Ready to transform your AI ideas into production-ready solutions?
+                </p>
+            </div>
+            
+            <div class="contact-options">
+                <a href="mailto:vittawat.soo@gmail.com" class="contact-method">
+                    <span class="contact-icon">✉️</span>
+                    <span>Email Me</span>
+                </a>
+                <a href="https://www.linkedin.com/in/vittawat-sootawee-95a82920b/" class="contact-method" target="_blank">
+                    <span class="contact-icon">💼</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Boom-Vitt" class="contact-method" target="_blank">
+                    <span class="contact-icon">💻</span>
+                    <span>GitHub</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Fixed Contact Button -->
-    <a href="#contact" class="fixed-contact">
-        <i class="fas fa-paper-plane"></i>
-    </a>
-
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">VS</div>
-                <p>Full-Cycle AI Solutions for Real-World Impact</p>
-                
-                <div class="footer-nav">
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#process">Process</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                
-                <div class="social-icons">
-                    <a href="https://github.com/Boom-Vitt" target="_blank" class="social-icon" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/vittawat-sootawee-95a82920b/" target="_blank" class="social-icon" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="mailto:vittawat.soo@gmail.com" class="social-icon" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-                
-                <div class="copyright">
-                    © 2023 Vittawat Sootawee. All rights reserved.
-                </div>
+            <div class="lang-content thai active">
+                <p>&copy; 2024 วิทวัส สุตะวี. สงวนลิขสิทธิ์.</p>
+            </div>
+            <div class="lang-content english">
+                <p>&copy; 2024 Vittawat Sootawee. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Font Awesome Icons Loader -->
     <script>
-        // Create SVG icons (we use this alternative to avoid CDN dependency)
-        document.addEventListener('DOMContentLoaded', function() {
-            // Create SVG loader logic
-            function loadFontAwesome() {
-                const icons = {
-                    faBars: {
-                        viewBox: '0 0 448 512',
-                        path: 'M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z'
-                    },
-                    faPaperPlane: {
-                        viewBox: '0 0 512 512',
-                        path: 'M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.9c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z'
-                    },
-                    faGithub: {
-                        viewBox: '0 0 496 512',
-                        path: 'M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-
+        // Language Toggle Functionality
+        const languageToggle = document.getElementById('languageToggle');
+        const languageText = document.getElementById('languageText');
+        let currentLang = 'thai';
+        
+        languageToggle.addEventListener('click', function() {
+            if (currentLang === 'thai') {
+                currentLang = 'english';
+                languageText.textContent = 'EN';
+                languageToggle.innerHTML = '<span class="flag">🇺🇸</span><span id="languageText">EN</span>';
+                
+                // Hide Thai content, show English content
+                document.querySelectorAll('.lang-content.thai').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.querySelectorAll('.lang-content.english').forEach(el => {
+                    el.classList.add('active');
+                });
+                
+                // Update navigation
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.textContent = link.getAttribute('data-en');
+                });
+                
+            } else {
+                currentLang = 'thai';
+                languageText.textContent = 'ไทย';
+                languageToggle.innerHTML = '<span class="flag">🇹🇭</span><span id="languageText">ไทย</span>';
+                
+                // Hide English content, show Thai content
+                document.querySelectorAll('.lang-content.english').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.querySelectorAll('.lang-content.thai').forEach(el => {
+                    el.classList.add('active');
+                });
+                
+                // Update navigation
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.textContent = link.getAttribute('data-th');
+                });
+            }
+        });
+        
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Performance optimization: Debounce scroll events
+        let ticking = false;
+        
+        function updateScrollEffects() {
+            // Add any additional scroll-based animations here
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        });
+        
+        // Load optimization: Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+        
+        // Preload critical resources
+        window.addEventListener('load', () => {
+            // Preload next section images
+            const criticalImages = [
+                'https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-1/486160157_672040672143705_8831580082068103124_n.jpg'
+            ];
+            
+            criticalImages.forEach(src => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = src;
+                document.head.appendChild(link);
+            });
+        });
+        
+        // Enhanced user experience: Add loading states
+        window.addEventListener('beforeunload', () => {
+            document.body.style.opacity = '0.7';
+        });
+        
+        // Add structured data for SEO
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Vittawat Sootawee",
+            "jobTitle": "AI & Full-Stack Engineer",
+            "description": "Experienced AI engineer specializing in transforming research into production-ready applications",
+            "url": window.location.href,
+            "image": "https://scontent.fkkc3-1.fna.fbcdn.net/v/t39.30808-1/486160157_672040672143705_8831580082068103124_n.jpg",
+            "sameAs": [
+                "https://github.com/Boom-Vitt",
+                "https://www.linkedin.com/in/vittawat-sootawee-95a82920b/"
+            ],
+            "knowsAbout": [
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Full-Stack Development",
+                "React",
+                "Python",
+                "Flutter"
+            ],
+            "alumniOf": "Mahidol University",
+            "nationality": "Thai",
+            "email": "vittawat.soo@gmail.com"
+        };
+        
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+        
+        // Analytics and performance monitoring (placeholder)
+        function trackEvent(eventName, properties) {
+            // Implement analytics tracking here
+            console.log('Event tracked:', eventName, properties);
+        }
+        
+        // Track important user interactions
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                trackEvent('button_click', {
+                    button_text: e.target.textContent,
+                    section: e.target.closest('section')?.id || 'unknown'
+                });
+            });
+        });
+        
+        // Track language changes
+        languageToggle.addEventListener('click', () => {
+            trackEvent('language_change', { 
+                from: currentLang === 'thai' ? 'thai' : 'english',
+                to: currentLang === 'thai' ? 'english' : 'thai'
+            });
+        });
+        
+        // Initialize animations after page load
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
