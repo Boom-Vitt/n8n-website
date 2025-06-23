@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Uploader - BoomBigNose Tool</title>
+    <meta name="description" content="AI Video Uploader by BoomBigNose - Personal, self-hosted tool for automated TikTok content posting with privacy protection.">
+    <meta name="keywords" content="AI Video Uploader, TikTok Automation, BoomBigNose, Content Posting API, Privacy Protection">
+    <meta name="author" content="BoomBigNose (Vittawat Sootawee)">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Video Uploader - BoomBigNose Tool">
+    <meta property="og:description" content="Personal, self-hosted tool for automated TikTok content posting with privacy protection">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/profile.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            /* Light Mode Colors (Default) */
+            --bg-primary: #FEFEFE;
+            --bg-secondary: #F8F6F3;
+            --bg-tertiary: #F0EDE8;
+            --text-primary: #2D2D2D;
+            --text-secondary: #5A5A5A;
+            --text-muted: #8A8A8A;
+            
+            /* Orange Accent Colors */
+            --accent-primary: #FF6B35;
+            --accent-secondary: #FF8C42;
+            --accent-light: #FFB366;
+            --accent-hover: #E55A2B;
+            
+            /* Cream Colors */
+            --cream-light: #FFF8F0;
+            --cream-medium: #F5F0E8;
+            --cream-dark: #E8DDD0;
+            
+            /* Supporting Colors */
+            --success: #22C55E;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            --info: #3B82F6;
+            
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+            
+            /* Font Sizes */
+            --text-4xl: 3.5rem;
+            --text-3xl: 2.25rem;
+            --text-2xl: 1.875rem;
+            --text-xl: 1.25rem;
+            --text-lg: 1.125rem;
+            --text-base: 1rem;
+            --text-sm: 0.875rem;
+            --text-xs: 0.75rem;
+            
+            /* Font Weights */
+            --font-light: 300;
+            --font-normal: 400;
+            --font-medium: 500;
+            --font-semibold: 600;
+            --font-bold: 700;
+            --font-extrabold: 800;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+        }
+        
+        /* Dark Mode Variables */
+        [data-theme="dark"] {
+            --bg-primary: #1A1A1A;
+            --bg-secondary: #2D2D2D;
+            --bg-tertiary: #3A3A3A;
+            --text-primary: #F5F5F5;
+            --text-secondary: #D1D1D1;
+            --text-muted: #A1A1A1;
+            
+            --cream-light: #2A2520;
+            --cream-medium: #3A3025;
+            --cream-dark: #4A3A30;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Container System */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        @media (min-width: 640px) {
+            .container { padding: 0 var(--space-xl); }
+        }
+        
+        @media (min-width: 1024px) {
+            .container { padding: 0 var(--space-3xl); }
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: var(--font-bold);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+        
+        h1 { font-size: var(--text-4xl); }
+        h2 { font-size: var(--text-3xl); }
+        h3 { font-size: var(--text-2xl); }
+        h4 { font-size: var(--text-xl); }
+        
+        p {
+            margin-bottom: var(--space-lg);
+            color: var(--text-secondary);
+        }
+        
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--accent-hover);
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: var(--space-sm) var(--space-xl);
+            border-radius: 8px;
+            font-weight: var(--font-semibold);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            text-decoration: none;
+            font-size: var(--text-base);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+            color: white;
+            background: linear-gradient(135deg, var(--accent-hover), var(--accent-primary));
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--cream-dark);
+            transition: all 0.3s ease;
+        }
+        
+        [data-theme="dark"] .nav {
+            background: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid var(--cream-dark);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        
+        .nav-logo {
+            font-size: var(--text-xl);
+            font-weight: var(--font-bold);
+            color: var(--accent-primary);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: var(--font-medium);
+            padding: var(--space-sm) 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-primary);
+        }
+        
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--accent-primary);
+            border-radius: 50px;
+            padding: var(--space-xs) var(--space-sm);
+            cursor: pointer;
+            color: var(--accent-primary);
+            font-size: var(--text-sm);
+            transition: all 0.3s ease;
+            margin-left: var(--space-md);
+        }
+        
+        .theme-toggle:hover {
+            background: var(--accent-primary);
+            color: white;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        
+        .hero-section {
+            text-align: center;
+            padding: var(--space-4xl) 0;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--cream-light) 100%);
+        }
+        
+        [data-theme="dark"] .hero-section {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+        
+        .hero-icon {
+            font-size: 4rem;
+            color: var(--accent-primary);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .hero-title {
+            font-size: clamp(2rem, 5vw, var(--text-4xl));
+            font-weight: var(--font-extrabold);
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: var(--text-xl);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-2xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: var(--space-4xl) 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+        
+        .section-title {
+            font-size: var(--text-3xl);
+            font-weight: var(--font-bold);
+            margin-bottom: var(--space-xl);
+            text-align: center;
+            color: var(--text-primary);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-2xl);
+        }
+        
+        .feature-card {
+            background: var(--bg-primary);
+            padding: var(--space-xl);
+            border-radius: 16px;
+            border: 1px solid var(--cream-dark);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        [data-theme="dark"] .feature-card {
+            background: var(--bg-tertiary);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(255, 107, 53, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: var(--text-2xl);
+            color: var(--accent-primary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .feature-title {
+            font-size: var(--text-xl);
+            font-weight: var(--font-bold);
+            margin-bottom: var(--space-sm);
+            color: var(--text-primary);
+        }
+        
+        .feature-description {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-logo">BOOMBIGNOSE</div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#tools" class="nav-link">Tools</a></li>
+                    <li><a href="ai-video-uploader.html" class="nav-link active">AI Video Uploader</a></li>
+                    <li><button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle">🌙</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-icon">🎬</div>
+                <h1 class="hero-title">AI Video Uploader</h1>
+                <p class="hero-subtitle">
+                    My personal, self-hosted tool that sends the short videos I create to my own TikTok account via the official Content Posting API.
+                </p>
+                <a href="https://www.youtube.com/@BoomBigNose" target="_blank" class="btn btn-primary">Watch Tutorial on YouTube</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📹</div>
+                        <h3 class="feature-title">Media Only</h3>
+                        <p class="feature-description">
+                            Uploads only the media and captions I provide—nothing else. No additional data collection or processing.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <h3 class="feature-title">Temporary Storage</h3>
+                        <p class="feature-description">
+                            Files are stored temporarily and automatically deleted after a successful, private-draft post.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3 class="feature-title">Privacy First</h3>
+                        <p class="feature-description">
+                            No third-party user data is collected or shared. Everything stays within my personal infrastructure.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <h3 class="feature-title">Compliant</h3>
+                        <p class="feature-description">
+                            Every upload follows TikTok Developer Terms, Community Guidelines, and Thailand PDPA regulations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Details Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">Technical Details</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔌</div>
+                        <h3 class="feature-title">Official API</h3>
+                        <p class="feature-description">
+                            Uses TikTok's official Content Posting API v2, ensuring compliance with platform guidelines and terms of service.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3 class="feature-title">Self-Hosted</h3>
+                        <p class="feature-description">
+                            Runs on my personal infrastructure with no third-party services involved in the upload process.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3 class="feature-title">Draft Posts</h3>
+                        <p class="feature-description">
+                            All uploads are created as private drafts, giving me full control over when and if content goes live.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3 class="feature-title">n8n Integration</h3>
+                        <p class="feature-description">
+                            Seamlessly integrates with n8n automation workflows for streamlined content publishing.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3 class="feature-title">Auto Cleanup</h3>
+                        <p class="feature-description">
+                            Automatic cleanup of temporary files within 24 hours, ensuring no data retention beyond necessity.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Background Processing</h3>
+                        <p class="feature-description">
+                            Uses Celery for background task processing, ensuring reliable and efficient video uploads.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">Privacy & Data Protection</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+                    <h3 style="color: var(--accent-primary); margin-bottom: var(--space-lg);">Data Collection</h3>
+                    <p>This tool collects and processes only the following data:</p>
+                    <ul style="margin-bottom: var(--space-xl); padding-left: var(--space-xl); color: var(--text-secondary);">
+                        <li>Video files and captions that I personally provide</li>
+                        <li>Temporary upload metadata required for API communication</li>
+                        <li>Basic logging for system monitoring and error handling</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-primary); margin-bottom: var(--space-lg);">Data Usage</h3>
+                    <p>Data is used exclusively for:</p>
+                    <ul style="margin-bottom: var(--space-xl); padding-left: var(--space-xl); color: var(--text-secondary);">
+                        <li>Uploading content to my personal TikTok account</li>
+                        <li>System operation and error monitoring</li>
+                        <li>Compliance with TikTok's API requirements</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-primary); margin-bottom: var(--space-lg);">Data Retention</h3>
+                    <p>All uploaded files and temporary data are automatically deleted within 24 hours of successful upload or immediately upon upload failure.</p>
+
+                    <h3 style="color: var(--accent-primary); margin-bottom: var(--space-lg);">Third-Party Sharing</h3>
+                    <p>No data is shared with third parties except as required by TikTok's Content Posting API for the upload process.</p>
+
+                    <h3 style="color: var(--accent-primary); margin-bottom: var(--space-lg);">Compliance</h3>
+                    <p>This tool operates in full compliance with:</p>
+                    <ul style="margin-bottom: var(--space-xl); padding-left: var(--space-xl); color: var(--text-secondary);">
+                        <li>TikTok Developer Terms of Service</li>
+                        <li>TikTok Community Guidelines</li>
+                        <li>Thailand Personal Data Protection Act (PDPA)</li>
+                        <li>General Data Protection Regulation (GDPR) principles</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">Questions or Concerns?</h2>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <p style="margin-bottom: var(--space-xl);">
+                        If you have any questions about this tool, its privacy practices, or data handling,
+                        feel free to reach out through my YouTube channel or social media.
+                    </p>
+                    <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+                        <a href="https://www.youtube.com/@BoomBigNose" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-youtube"></i> YouTube Channel
+                        </a>
+                        <a href="index.html#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('theme-toggle');
+            
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.getElementById('theme-toggle');
+            
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

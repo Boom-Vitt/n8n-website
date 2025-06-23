@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoomBigNose</title>
-    <meta name="description" content="AI-first full-stack engineer building production-ready intelligent solutions. 4+ years experience in healthcare, education, and consumer AI applications.">
-    <meta name="keywords" content="AI Engineer, Full-Stack Developer, Machine Learning, Mobile Development, TypeScript, Python, React">
-    <meta name="author" content="Vittawat Sootawee">
-    
+    <title>BoomBigNose - YouTube Educator & n8n Automation Expert</title>
+    <meta name="description" content="YouTube educator teaching n8n automation, AI tools, and technical tutorials. Learn automation, AI integration, and productivity tools with BoomBigNose.">
+    <meta name="keywords" content="YouTube Educator, n8n Automation, AI Tools, Technical Tutorials, Automation Expert, Content Creator, BoomBigNose">
+    <meta name="author" content="BoomBigNose (Vittawat Sootawee)">
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Vittawat Sootawee - AI & Full-Stack Engineer">
-    <meta property="og:description" content="Transforming AI research into production applications">
+    <meta property="og:title" content="BoomBigNose - YouTube Educator & n8n Automation Expert">
+    <meta property="og:description" content="Learn n8n automation, AI tools, and technical skills through comprehensive YouTube tutorials">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/profile.jpg">
     
@@ -28,33 +28,35 @@
     <style>
         /* CSS Variables */
         :root {
-            /* Primary Colors */
-            --primary-dark: #0D1B2A;
-            --primary-medium: #415A77;
-            --primary-light: #778DA9;
-            
+            /* Light Mode Colors (Default) */
+            --bg-primary: #FEFEFE;
+            --bg-secondary: #F8F6F3;
+            --bg-tertiary: #F0EDE8;
+            --text-primary: #2D2D2D;
+            --text-secondary: #5A5A5A;
+            --text-muted: #8A8A8A;
+
+            /* Orange Accent Colors */
+            --accent-primary: #FF6B35;
+            --accent-secondary: #FF8C42;
+            --accent-light: #FFB366;
+            --accent-hover: #E55A2B;
+
+            /* Cream Colors */
+            --cream-light: #FFF8F0;
+            --cream-medium: #F5F0E8;
+            --cream-dark: #E8DDD0;
+
             /* Supporting Colors */
-            --accent-electric: #00D4FF;
-            --accent-success: #00E676;
-            --accent-warning: #FFA726;
-            
-            /* Neutral System */
-            --neutral-darkest: #0A0F16;
-            --neutral-dark: #1A2332;
-            --neutral-medium: #8B9DC3;
-            --neutral-light: #E8ECF4;
-            --neutral-lightest: #F5F7FA;
-            
-            /* Semantic Colors */
-            --error: #FF5252;
-            --success: #4CAF50;
-            --warning: #FF9800;
-            --info: #2196F3;
-            
+            --success: #22C55E;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            --info: #3B82F6;
+
             /* Typography */
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-            
+
             /* Font Sizes */
             --text-4xl: 3.5rem;
             --text-3xl: 2.25rem;
@@ -64,7 +66,7 @@
             --text-base: 1rem;
             --text-sm: 0.875rem;
             --text-xs: 0.75rem;
-            
+
             /* Font Weights */
             --font-light: 300;
             --font-normal: 400;
@@ -72,7 +74,7 @@
             --font-semibold: 600;
             --font-bold: 700;
             --font-extrabold: 800;
-            
+
             /* Spacing */
             --space-xs: 0.5rem;
             --space-sm: 0.75rem;
@@ -82,6 +84,20 @@
             --space-2xl: 3rem;
             --space-3xl: 4rem;
             --space-4xl: 6rem;
+        }
+
+        /* Dark Mode Variables */
+        [data-theme="dark"] {
+            --bg-primary: #1A1A1A;
+            --bg-secondary: #2D2D2D;
+            --bg-tertiary: #3A3A3A;
+            --text-primary: #F5F5F5;
+            --text-secondary: #D1D1D1;
+            --text-muted: #A1A1A1;
+
+            --cream-light: #2A2520;
+            --cream-medium: #3A3025;
+            --cream-dark: #4A3A30;
         }
         
         /* Reset & Base Styles */
@@ -99,9 +115,10 @@
         body {
             font-family: var(--font-primary);
             line-height: 1.6;
-            color: var(--neutral-light);
-            background-color: var(--neutral-darkest);
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         /* Container System */
@@ -133,17 +150,17 @@
         
         p {
             margin-bottom: var(--space-lg);
-            color: var(--neutral-medium);
+            color: var(--text-secondary);
         }
-        
+
         a {
-            color: var(--accent-electric);
+            color: var(--accent-primary);
             text-decoration: none;
             transition: all 0.2s ease;
         }
-        
+
         a:hover {
-            color: var(--accent-success);
+            color: var(--accent-hover);
         }
         
         /* Button Styles */
@@ -161,25 +178,26 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent-electric), var(--primary-medium));
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             color: white;
-            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
             color: white;
+            background: linear-gradient(135deg, var(--accent-hover), var(--accent-primary));
         }
-        
+
         .btn-secondary {
-            border: 2px solid var(--primary-medium);
-            color: var(--primary-medium);
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
             background: transparent;
         }
-        
+
         .btn-secondary:hover {
-            background: var(--primary-medium);
+            background: var(--accent-primary);
             color: white;
         }
         
@@ -190,10 +208,15 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(10, 15, 22, 0.95);
+            background: rgba(254, 254, 254, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--primary-dark);
+            border-bottom: 1px solid var(--cream-dark);
             transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] .nav {
+            background: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid var(--cream-dark);
         }
         
         .nav-container {
@@ -206,27 +229,46 @@
         .nav-logo {
             font-size: var(--text-xl);
             font-weight: var(--font-bold);
-            color: var(--accent-electric);
+            color: var(--accent-primary);
         }
-        
+
         .nav-menu {
             display: flex;
             list-style: none;
             gap: var(--space-xl);
+            align-items: center;
         }
-        
+
         .nav-link {
-            color: var(--neutral-medium);
+            color: var(--text-secondary);
             font-weight: var(--font-medium);
             padding: var(--space-sm) 0;
             border-bottom: 2px solid transparent;
             transition: all 0.2s ease;
         }
-        
+
         .nav-link:hover,
         .nav-link.active {
-            color: var(--accent-electric);
-            border-bottom-color: var(--accent-electric);
+            color: var(--accent-primary);
+            border-bottom-color: var(--accent-primary);
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--accent-primary);
+            border-radius: 50px;
+            padding: var(--space-xs) var(--space-sm);
+            cursor: pointer;
+            color: var(--accent-primary);
+            font-size: var(--text-sm);
+            transition: all 0.3s ease;
+            margin-left: var(--space-md);
+        }
+
+        .theme-toggle:hover {
+            background: var(--accent-primary);
+            color: white;
         }
         
         .nav-toggle {
@@ -238,7 +280,7 @@
         .nav-toggle span {
             width: 25px;
             height: 3px;
-            background: var(--neutral-light);
+            background: var(--text-primary);
             margin: 3px 0;
             transition: 0.3s;
         }
@@ -251,18 +293,24 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 70px);
-                background: var(--neutral-darkest);
+                background: var(--bg-primary);
                 flex-direction: column;
                 padding: var(--space-xl);
                 transition: left 0.3s ease;
+                border-right: 1px solid var(--cream-dark);
             }
-            
+
             .nav-menu.active {
                 left: 0;
             }
-            
+
             .nav-toggle {
                 display: flex;
+            }
+
+            .theme-toggle {
+                margin-left: 0;
+                margin-top: var(--space-lg);
             }
         }
         
@@ -273,11 +321,15 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, var(--neutral-darkest) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--cream-light) 100%);
             position: relative;
             overflow: hidden;
         }
-        
+
+        [data-theme="dark"] .hero {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -285,8 +337,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                             radial-gradient(circle at 80% 20%, rgba(65, 90, 119, 0.1) 0%, transparent 50%);
+            background-image: radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+                             radial-gradient(circle at 80% 20%, rgba(255, 140, 66, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
         
@@ -300,15 +352,15 @@
             font-size: clamp(2.25rem, 5vw, var(--text-4xl));
             font-weight: var(--font-extrabold);
             margin-bottom: var(--space-lg);
-            background: linear-gradient(135deg, var(--accent-electric), var(--neutral-light));
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .hero-subtitle {
             font-size: var(--text-xl);
-            color: var(--neutral-medium);
+            color: var(--text-secondary);
             margin-bottom: var(--space-2xl);
             line-height: 1.6;
         }
@@ -319,27 +371,32 @@
             gap: var(--space-lg);
             margin: var(--space-2xl) 0;
             padding: var(--space-xl);
-            background: rgba(26, 35, 50, 0.5);
+            background: rgba(255, 248, 240, 0.8);
             border-radius: 16px;
             backdrop-filter: blur(10px);
-            border: 1px solid var(--primary-dark);
+            border: 1px solid var(--cream-dark);
         }
-        
+
+        [data-theme="dark"] .hero-metrics {
+            background: rgba(42, 37, 32, 0.8);
+            border: 1px solid var(--cream-dark);
+        }
+
         .metric {
             text-align: center;
         }
-        
+
         .metric-value {
             display: block;
             font-size: var(--text-2xl);
             font-weight: var(--font-bold);
-            color: var(--accent-electric);
+            color: var(--accent-primary);
             margin-bottom: var(--space-xs);
         }
-        
+
         .metric-label {
             font-size: var(--text-sm);
-            color: var(--neutral-medium);
+            color: var(--text-secondary);
         }
         
         .hero-cta {
@@ -356,8 +413,8 @@
             height: 300px;
             border-radius: 50%;
             margin: 0 auto var(--space-xl);
-            border: 4px solid var(--accent-electric);
-            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.3);
+            border: 4px solid var(--accent-primary);
+            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.3);
             object-fit: cover;
             animation: float 3s ease-in-out infinite;
         }
@@ -381,19 +438,19 @@
             font-size: var(--text-3xl);
             font-weight: var(--font-bold);
             margin-bottom: var(--space-lg);
-            color: var(--neutral-light);
+            color: var(--text-primary);
         }
-        
+
         .section-subtitle {
             font-size: var(--text-lg);
-            color: var(--neutral-medium);
+            color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         /* About Section */
         .about {
-            background: var(--primary-dark);
+            background: var(--bg-secondary);
         }
         
         .about-content {
@@ -511,51 +568,59 @@
         
         /* Projects Section */
         .projects {
-            background: var(--primary-dark);
+            background: var(--bg-secondary);
         }
-        
+
+        .tools {
+            background: var(--bg-primary);
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: var(--space-xl);
         }
-        
+
         .project-card {
-            background: var(--neutral-darkest);
+            background: var(--bg-primary);
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid var(--primary-medium);
+            border: 1px solid var(--cream-dark);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
         }
-        
+
+        [data-theme="dark"] .project-card {
+            background: var(--bg-tertiary);
+        }
+
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(65, 90, 119, 0.15);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
         }
-        
+
         .project-badge {
             position: absolute;
             top: var(--space-lg);
             right: var(--space-lg);
-            background: var(--accent-success);
-            color: var(--neutral-darkest);
+            background: var(--accent-primary);
+            color: white;
             padding: var(--space-xs) var(--space-sm);
             border-radius: 6px;
             font-size: var(--text-xs);
             font-weight: var(--font-semibold);
             z-index: 2;
         }
-        
+
         .project-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, var(--primary-medium), var(--primary-light));
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: var(--text-3xl);
-            color: var(--neutral-light);
+            color: white;
         }
         
         .project-content {
@@ -565,63 +630,72 @@
         .project-title {
             font-size: var(--text-xl);
             font-weight: var(--font-bold);
-            color: var(--neutral-light);
+            color: var(--text-primary);
             margin-bottom: var(--space-sm);
         }
-        
+
         .project-impact {
-            color: var(--accent-electric);
+            color: var(--accent-primary);
             font-weight: var(--font-semibold);
             margin-bottom: var(--space-sm);
             font-size: var(--text-sm);
         }
-        
+
         .project-description {
-            color: var(--neutral-medium);
+            color: var(--text-secondary);
             margin-bottom: var(--space-lg);
         }
-        
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
             gap: var(--space-xs);
             margin-bottom: var(--space-lg);
         }
-        
+
         .tech-tag {
-            background: var(--primary-dark);
-            color: var(--neutral-light);
+            background: var(--cream-medium);
+            color: var(--text-primary);
             padding: var(--space-xs) var(--space-sm);
             border-radius: 4px;
             font-size: var(--text-xs);
             font-family: var(--font-mono);
         }
-        
+
+        [data-theme="dark"] .tech-tag {
+            background: var(--cream-dark);
+        }
+
         .project-links {
             display: flex;
             gap: var(--space-sm);
             flex-wrap: wrap;
         }
-        
+
         .project-link {
             padding: var(--space-sm) var(--space-md);
             border-radius: 6px;
             font-size: var(--text-sm);
             transition: all 0.2s ease;
         }
-        
+
         .project-link.primary {
-            background: var(--accent-electric);
-            color: var(--neutral-darkest);
+            background: var(--accent-primary);
+            color: white;
         }
-        
+
         .project-link.secondary {
-            border: 1px solid var(--primary-medium);
-            color: var(--neutral-light);
+            border: 1px solid var(--accent-primary);
+            color: var(--accent-primary);
         }
-        
+
         .project-link:hover {
             transform: translateY(-1px);
+        }
+
+        .project-link.secondary:hover {
+            background: var(--accent-primary);
+            color: white;
         }
         
         /* Contact Section */
@@ -776,13 +850,15 @@
     <nav class="nav" id="navbar">
         <div class="container">
             <div class="nav-container">
-                <div class="nav-logo">VITTAWAT SOO.</div>
+                <div class="nav-logo">BOOMBIGNOSE</div>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#home" class="nav-link active" data-en="Home" data-th="หน้าหลัก">Home</a></li>
                     <li><a href="#about" class="nav-link" data-en="About" data-th="เกี่ยวกับ">About</a></li>
                     <li><a href="#skills" class="nav-link" data-en="Skills" data-th="ทักษะ">Skills</a></li>
                     <li><a href="#projects" class="nav-link" data-en="Projects" data-th="ผลงาน">Projects</a></li>
+                    <li><a href="#tools" class="nav-link" data-en="Tools" data-th="เครื่องมือ">Tools</a></li>
                     <li><a href="#contact" class="nav-link" data-en="Contact" data-th="ติดต่อ">Contact</a></li>
+                    <li><button class="theme-toggle" onclick="toggleTheme()" id="theme-toggle">🌙</button></li>
                 </ul>
                 <div class="nav-toggle" id="nav-toggle">
                     <span></span>
@@ -800,36 +876,36 @@
                 <img src="assets/profile.jpg" alt="Vittawat Sootawee" class="hero-profile">
                 
                 <h1 class="hero-title">
-                    <span data-en="AI-First Full-Stack Engineer" data-th="วิศวกร AI และ Full-Stack">AI-First Full-Stack Engineer</span><br>
-                    <span data-en="Building Production-Ready Smart Solutions" data-th="สร้างโซลูชั่นอัจฉริยะระดับโปรดักชั่น">Building Production-Ready Smart Solutions</span>
+                    <span data-en="YouTube Educator & n8n Expert" data-th="ครูสอน YouTube และผู้เชี่ยวชาญ n8n">YouTube Educator & n8n Expert</span><br>
+                    <span data-en="Teaching Automation & AI Tools" data-th="สอนระบบอัตโนมัติและเครื่องมือ AI">Teaching Automation & AI Tools</span>
                 </h1>
-                
+
                 <p class="hero-subtitle">
-                    <span data-en="Transforming cutting-edge AI research into real-world applications that impact thousands of users across healthcare, education, and consumer markets." data-th="แปลงงานวิจัย AI ล้ำสมัยเป็นแอปพลิเคชั่นในโลกจริงที่ส่งผลกระทบต่อผู้ใช้หลายพันคนในด้านสุขภาพ การศึกษา และตลาดผู้บริโภค">Transforming cutting-edge AI research into real-world applications that impact thousands of users across healthcare, education, and consumer markets.</span>
+                    <span data-en="Empowering creators and professionals with comprehensive tutorials on n8n automation, AI integration, and productivity tools. Join thousands learning to work smarter, not harder." data-th="เสริมพลังให้ผู้สร้างสรรค์และมืออาชีพด้วยบทเรียนที่ครอบคลุมเกี่ยวกับระบบอัตโนมัติ n8n การรวม AI และเครื่องมือเพิ่มประสิทธิภาพ เข้าร่วมกับผู้เรียนหลายพันคนเพื่อทำงานอย่างฉลาด ไม่ใช่หนัก">Empowering creators and professionals with comprehensive tutorials on n8n automation, AI integration, and productivity tools. Join thousands learning to work smarter, not harder.</span>
                 </p>
                 
                 <div class="hero-metrics">
                     <div class="metric">
-                        <span class="metric-value">4+</span>
-                        <span class="metric-label" data-en="Years Experience" data-th="ปีประสบการณ์">Years Experience</span>
+                        <span class="metric-value">50+</span>
+                        <span class="metric-label" data-en="Tutorial Videos" data-th="วิดีโอสอน">Tutorial Videos</span>
                     </div>
                     <div class="metric">
-                        <span class="metric-value">15%</span>
-                        <span class="metric-label" data-en="AUC Improvement" data-th="การปรับปรุง AUC">AUC Improvement</span>
+                        <span class="metric-value">10K+</span>
+                        <span class="metric-label" data-en="YouTube Views" data-th="ยอดวิว YouTube">YouTube Views</span>
                     </div>
                     <div class="metric">
-                        <span class="metric-value">5.0★</span>
-                        <span class="metric-label" data-en="App Rating" data-th="คะแนนแอป">App Rating</span>
+                        <span class="metric-value">n8n</span>
+                        <span class="metric-label" data-en="Automation Expert" data-th="ผู้เชี่ยวชาญระบบอัตโนมัติ">Automation Expert</span>
                     </div>
                     <div class="metric">
-                        <span class="metric-value">1000+</span>
-                        <span class="metric-label" data-en="Users Served" data-th="ผู้ใช้ที่ให้บริการ">Users Served</span>
+                        <span class="metric-value">AI</span>
+                        <span class="metric-label" data-en="Integration Specialist" data-th="ผู้เชี่ยวชาญการรวม">Integration Specialist</span>
                     </div>
                 </div>
                 
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary" data-en="View Live Projects" data-th="ดูโปรเจกต์จริง">View Live Projects</a>
-                    <a href="#contact" class="btn btn-secondary" data-en="Get In Touch" data-th="ติดต่อ">Get In Touch</a>
+                    <a href="https://www.youtube.com/@BoomBigNose" target="_blank" class="btn btn-primary" data-en="Watch YouTube Channel" data-th="ดูช่อง YouTube">Watch YouTube Channel</a>
+                    <a href="#tools" class="btn btn-secondary" data-en="View My Tools" data-th="ดูเครื่องมือของฉัน">View My Tools</a>
                 </div>
             </div>
         </div>
@@ -1138,6 +1214,87 @@
                         <span class="skill-tag">Embedded</span>
                         <span class="skill-tag">Web3</span>
                         <span class="skill-tag">OpenRouter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="My Tools & Resources" data-th="เครื่องมือและทรัพยากรของฉัน">My Tools & Resources</h2>
+                <p class="section-subtitle" data-en="Custom tools and resources I've built to enhance productivity and automation" data-th="เครื่องมือและทรัพยากรที่กำหนดเองที่ฉันสร้างขึ้นเพื่อเพิ่มประสิทธิภาพและระบบอัตโนมัติ">Custom tools and resources I've built to enhance productivity and automation</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- AI Video Uploader Tool -->
+                <div class="project-card fade-in-up">
+                    <div class="project-badge" data-en="PERSONAL TOOL" data-th="เครื่องมือส่วนตัว">PERSONAL TOOL</div>
+                    <div class="project-image">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Video Uploader</h3>
+                        <p class="project-impact" data-en="Automated TikTok Content Posting" data-th="การโพสต์เนื้อหา TikTok อัตโนมัติ">Automated TikTok Content Posting</p>
+                        <p class="project-description" data-en="Personal, self-hosted tool that sends short videos to my TikTok account via official Content Posting API. Privacy-focused with temporary storage and automatic deletion." data-th="เครื่องมือส่วนตัวที่โฮสต์เองซึ่งส่งวิดีโอสั้นไปยังบัญชี TikTok ของฉันผ่าน API การโพสต์เนื้อหาอย่างเป็นทางการ เน้นความเป็นส่วนตัวด้วยการจัดเก็บชั่วคราวและการลบอัตโนมัติ">Personal, self-hosted tool that sends short videos to my TikTok account via official Content Posting API. Privacy-focused with temporary storage and automatic deletion.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TikTok API</span>
+                            <span class="tech-tag">Self-Hosted</span>
+                            <span class="tech-tag">Privacy First</span>
+                            <span class="tech-tag">PDPA Compliant</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="ai-video-uploader.html" class="project-link primary" data-en="Learn More" data-th="เรียนรู้เพิ่มเติม">Learn More</a>
+                            <a href="https://www.youtube.com/@BoomBigNose" target="_blank" class="project-link secondary" data-en="Watch Tutorial" data-th="ดูบทเรียน">Watch Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- n8n Automation Workflows -->
+                <div class="project-card fade-in-up">
+                    <div class="project-badge" data-en="TUTORIAL SERIES" data-th="ซีรีส์บทเรียน">TUTORIAL SERIES</div>
+                    <div class="project-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">n8n Automation Workflows</h3>
+                        <p class="project-impact" data-en="50+ Tutorial Videos on YouTube" data-th="วิดีโอสอน 50+ เรื่องบน YouTube">50+ Tutorial Videos on YouTube</p>
+                        <p class="project-description" data-en="Comprehensive collection of n8n automation workflows covering Gmail integration, Google Sheets, AI tools, and image generation. Perfect for beginners and advanced users." data-th="คอลเลกชันที่ครอบคลุมของเวิร์กโฟลว์ระบบอัตโนมัติ n8n ครอบคลุมการรวม Gmail, Google Sheets, เครื่องมือ AI และการสร้างภาพ เหมาะสำหรับผู้เริ่มต้นและผู้ใช้ขั้นสูง">Comprehensive collection of n8n automation workflows covering Gmail integration, Google Sheets, AI tools, and image generation. Perfect for beginners and advanced users.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">Gmail API</span>
+                            <span class="tech-tag">Google Sheets</span>
+                            <span class="tech-tag">AI Integration</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/@BoomBigNose" target="_blank" class="project-link primary" data-en="Watch Tutorials" data-th="ดูบทเรียน">Watch Tutorials</a>
+                            <a href="#contact" class="project-link secondary" data-en="Request Tutorial" data-th="ขอบทเรียน">Request Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Claude AI + n8n Integration -->
+                <div class="project-card fade-in-up">
+                    <div class="project-badge" data-en="PRODUCTIVITY BOOST" data-th="เพิ่มประสิทธิภาพ">PRODUCTIVITY BOOST</div>
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Claude AI + n8n MCP Tools</h3>
+                        <p class="project-impact" data-en="10X Faster Workflow Automation" data-th="ระบบอัตโนมัติเร็วขึ้น 10 เท่า">10X Faster Workflow Automation</p>
+                        <p class="project-description" data-en="Advanced integration tutorial showing how to combine Claude AI with n8n using Model Control Protocol (MCP) tools for automated workflow creation and management." data-th="บทเรียนการรวมขั้นสูงที่แสดงวิธีการรวม Claude AI กับ n8n โดยใช้เครื่องมือ Model Control Protocol (MCP) สำหรับการสร้างและจัดการเวิร์กโฟลว์อัตโนมัติ">Advanced integration tutorial showing how to combine Claude AI with n8n using Model Control Protocol (MCP) tools for automated workflow creation and management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Claude AI</span>
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">MCP Tools</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/@BoomBigNose" target="_blank" class="project-link primary" data-en="Watch Tutorial" data-th="ดูบทเรียน">Watch Tutorial</a>
+                            <a href="#contact" class="project-link secondary" data-en="Get Help" data-th="ขอความช่วยเหลือ">Get Help</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1525,14 +1682,39 @@
             });
         }
         
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('theme-toggle');
+
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
         // Initialize page
         document.addEventListener('DOMContentLoaded', () => {
             updateActiveNav();
             updateNavbar();
-            
+
             // Set initial language
             setLanguage('en');
-            
+
+            // Load saved theme
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.getElementById('theme-toggle');
+
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+            }
+
             // Add loading class removal after initial load
             setTimeout(() => {
                 document.body.classList.add('loaded');
