@@ -28,30 +28,42 @@
     <style>
         /* CSS Variables */
         :root {
-            /* Light Mode Colors (Default) */
-            --bg-primary: #FEFEFE;
-            --bg-secondary: #F8F6F3;
-            --bg-tertiary: #F0EDE8;
-            --text-primary: #2D2D2D;
-            --text-secondary: #5A5A5A;
-            --text-muted: #8A8A8A;
+            /* Light Mode Colors (Default) - Improved for reliability */
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8FAFC;
+            --bg-tertiary: #F1F5F9;
+            --text-primary: #1E293B;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
 
-            /* Orange Accent Colors */
-            --accent-primary: #FF6B35;
-            --accent-secondary: #FF8C42;
-            --accent-light: #FFB366;
-            --accent-hover: #E55A2B;
+            /* Reliable Orange Accent Colors - Better contrast ratios */
+            --accent-primary: #EA580C;
+            --accent-secondary: #FB923C;
+            --accent-light: #FED7AA;
+            --accent-hover: #C2410C;
+            --accent-dark: #9A3412;
 
-            /* Cream Colors */
-            --cream-light: #FFF8F0;
-            --cream-medium: #F5F0E8;
-            --cream-dark: #E8DDD0;
+            /* Neutral Colors for better reliability */
+            --neutral-50: #F8FAFC;
+            --neutral-100: #F1F5F9;
+            --neutral-200: #E2E8F0;
+            --neutral-300: #CBD5E1;
+            --neutral-400: #94A3B8;
+            --neutral-500: #64748B;
+            --neutral-600: #475569;
+            --neutral-700: #334155;
+            --neutral-800: #1E293B;
+            --neutral-900: #0F172A;
 
-            /* Supporting Colors */
-            --success: #22C55E;
-            --warning: #F59E0B;
-            --error: #EF4444;
-            --info: #3B82F6;
+            /* Supporting Colors - WCAG AA compliant */
+            --success: #059669;
+            --success-light: #D1FAE5;
+            --warning: #D97706;
+            --warning-light: #FEF3C7;
+            --error: #DC2626;
+            --error-light: #FEE2E2;
+            --info: #2563EB;
+            --info-light: #DBEAFE;
 
             /* Typography */
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -86,18 +98,32 @@
             --space-4xl: 6rem;
         }
 
-        /* Dark Mode Variables */
+        /* Dark Mode Variables - Improved contrast and reliability */
         [data-theme="dark"] {
-            --bg-primary: #1A1A1A;
-            --bg-secondary: #2D2D2D;
-            --bg-tertiary: #3A3A3A;
-            --text-primary: #F5F5F5;
-            --text-secondary: #D1D1D1;
-            --text-muted: #A1A1A1;
+            --bg-primary: #0F172A;
+            --bg-secondary: #1E293B;
+            --bg-tertiary: #334155;
+            --text-primary: #F8FAFC;
+            --text-secondary: #CBD5E1;
+            --text-muted: #94A3B8;
 
-            --cream-light: #2A2520;
-            --cream-medium: #3A3025;
-            --cream-dark: #4A3A30;
+            /* Dark mode neutral overrides */
+            --neutral-50: #0F172A;
+            --neutral-100: #1E293B;
+            --neutral-200: #334155;
+            --neutral-300: #475569;
+            --neutral-400: #64748B;
+            --neutral-500: #94A3B8;
+            --neutral-600: #CBD5E1;
+            --neutral-700: #E2E8F0;
+            --neutral-800: #F1F5F9;
+            --neutral-900: #F8FAFC;
+
+            /* Adjust accent colors for dark mode */
+            --accent-primary: #FB923C;
+            --accent-secondary: #FDBA74;
+            --accent-light: #FED7AA;
+            --accent-hover: #F97316;
         }
         
         /* Reset & Base Styles */
@@ -208,15 +234,15 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(254, 254, 254, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--cream-dark);
+            border-bottom: 1px solid var(--neutral-200);
             transition: all 0.3s ease;
         }
 
         [data-theme="dark"] .nav {
-            background: rgba(26, 26, 26, 0.95);
-            border-bottom: 1px solid var(--cream-dark);
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--neutral-700);
         }
         
         .nav-container {
@@ -321,7 +347,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--cream-light) 100%);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--neutral-50) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -337,8 +363,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
-                             radial-gradient(circle at 80% 20%, rgba(255, 140, 66, 0.1) 0%, transparent 50%);
+            background-image: radial-gradient(circle at 20% 80%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
+                             radial-gradient(circle at 80% 20%, rgba(251, 146, 60, 0.08) 0%, transparent 50%);
             pointer-events: none;
         }
         
@@ -371,15 +397,17 @@
             gap: var(--space-lg);
             margin: var(--space-2xl) 0;
             padding: var(--space-xl);
-            background: rgba(255, 248, 240, 0.8);
+            background: rgba(248, 250, 252, 0.9);
             border-radius: 16px;
             backdrop-filter: blur(10px);
-            border: 1px solid var(--cream-dark);
+            border: 1px solid var(--neutral-200);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         [data-theme="dark"] .hero-metrics {
-            background: rgba(42, 37, 32, 0.8);
-            border: 1px solid var(--cream-dark);
+            background: rgba(30, 41, 59, 0.9);
+            border: 1px solid var(--neutral-700);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
         }
 
         .metric {
@@ -585,18 +613,25 @@
             background: var(--bg-primary);
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid var(--cream-dark);
+            border: 1px solid var(--neutral-200);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
         }
 
         [data-theme="dark"] .project-card {
             background: var(--bg-tertiary);
+            border: 1px solid var(--neutral-700);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
         }
 
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
+            box-shadow: 0 20px 40px rgba(234, 88, 12, 0.15);
+        }
+
+        [data-theme="dark"] .project-card:hover {
+            box-shadow: 0 20px 40px rgba(251, 146, 60, 0.2);
         }
 
         .project-badge {
@@ -654,16 +689,20 @@
         }
 
         .tech-tag {
-            background: var(--cream-medium);
-            color: var(--text-primary);
+            background: var(--neutral-100);
+            color: var(--neutral-700);
             padding: var(--space-xs) var(--space-sm);
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: var(--text-xs);
             font-family: var(--font-mono);
+            font-weight: var(--font-medium);
+            border: 1px solid var(--neutral-200);
         }
 
         [data-theme="dark"] .tech-tag {
-            background: var(--cream-dark);
+            background: var(--neutral-800);
+            color: var(--neutral-300);
+            border: 1px solid var(--neutral-700);
         }
 
         .project-links {
@@ -1229,28 +1268,6 @@
             </div>
 
             <div class="projects-grid">
-                <!-- AI Video Uploader Tool -->
-                <div class="project-card fade-in-up">
-                    <div class="project-badge" data-en="PERSONAL TOOL" data-th="เครื่องมือส่วนตัว">PERSONAL TOOL</div>
-                    <div class="project-image">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Video Uploader</h3>
-                        <p class="project-impact" data-en="Automated TikTok Content Posting" data-th="การโพสต์เนื้อหา TikTok อัตโนมัติ">Automated TikTok Content Posting</p>
-                        <p class="project-description" data-en="Personal, self-hosted tool that sends short videos to my TikTok account via official Content Posting API. Privacy-focused with temporary storage and automatic deletion." data-th="เครื่องมือส่วนตัวที่โฮสต์เองซึ่งส่งวิดีโอสั้นไปยังบัญชี TikTok ของฉันผ่าน API การโพสต์เนื้อหาอย่างเป็นทางการ เน้นความเป็นส่วนตัวด้วยการจัดเก็บชั่วคราวและการลบอัตโนมัติ">Personal, self-hosted tool that sends short videos to my TikTok account via official Content Posting API. Privacy-focused with temporary storage and automatic deletion.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">TikTok API</span>
-                            <span class="tech-tag">Self-Hosted</span>
-                            <span class="tech-tag">Privacy First</span>
-                            <span class="tech-tag">PDPA Compliant</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="ai-video-uploader.html" class="project-link primary" data-en="Learn More" data-th="เรียนรู้เพิ่มเติม">Learn More</a>
-                            <a href="https://www.youtube.com/@BoomBigNose" target="_blank" class="project-link secondary" data-en="Watch Tutorial" data-th="ดูบทเรียน">Watch Tutorial</a>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- n8n Automation Workflows -->
                 <div class="project-card fade-in-up">
